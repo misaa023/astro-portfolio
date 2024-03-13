@@ -1,16 +1,15 @@
 ---
-
+import Hero from "../components/Hero.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro hola</h1>
-	</body>
-</html>
+<SiteLayout>
+  <div class="container col-xxl-8 px-4 py-5">
+    <Hero 
+      title="Mi primera Astro web"
+      imageUrl="https://placekitten.com/g/500/400"
+      buttonText="Leer más"
+      buttonLink="/about"
+    />
+  </div>
+</SiteLayout>
